@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #1a1a1d;
+    overflow-x: hidden;
+}
+.main_con{
+    padding: 15px;
+    background: #1a1a1d;
+}
+.main_con input{
+    background: transparent;
+    box-shadow: none;
+    border-radius: 3px;
+    color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.4);
+}
+.main_con input::placeholder{
+    color: rgba(255,255,255,0.4);
+}
+.main_con input:focus{
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    color: rgba(255,255,255,0.8);
+}
+.main_con select{
+    background: transparent;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+select#studio option {
+    background-color: #1a1a1d; 
+    color: rgba(255,255,255,0.8); 
+}
+select#studio option:checked {
+    background: #F15B23;
+}
+select#studio option:hover {
+    background: #F15B23;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+ }
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.submitBtn button{
+    width: 200px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #F99D36 0%, #F15B23 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    color: #fff;
+    border: 1px solid #1a1a1d;
+}
+.submitBtn button:hover{
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+.code_btn button{
+    width: auto;
+    margin-top: 30px;
+    /* display: none; */
+    background: linear-gradient(135deg, #F99D36 0%, #F15B23 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    color: #fff;
+    border: 1px solid #1a1a1d;
+}
+.code_btn button:hover{
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.8);
+}
+.chekboxes{
+    height: 38px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+}
+.chekboxes div{
+    margin: 0px 5px;
+}
+ /* Hide the default checkbox */
+ input[type="checkbox"] {
+    display: none;
+}
+
+/* Create a custom checkbox appearance */
+input[type="checkbox"] + label {
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    padding: 3px;
+    cursor: pointer;
+    color: rgba(255,255,255,0.4);
+}
+
+/* Style the checked state */
+input[type="checkbox"]:checked + label {
+    background: linear-gradient(135deg, #F99D36 0%, #F15B23 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    color: #fff;
+}
+input[type="checkbox"]:checked + label::before {
+    content: '\2713'; 
+    text-align: center;
+    line-height: 20px; 
+    color: white;
+    font-size: 16px;
+    margin: 0px 3px;
+}
+input[type="checkbox"]+ label::before {
+    content: '\2715'; 
+    text-align: center;
+    line-height: 20px; 
+    color: rgba(255,255,255,0.4);
+    font-size: 16px;
+    margin: 0px 3px;
+}
+
+@media only screen and (max-width: 992px) {
+    .chekboxes{
+        height: auto;
+    }
+    .chekboxes div{
+        margin: 3px 5px;
+    }
+}
+.response{
+    height: 50px;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+}
+.response .done{
+    color: #32fc00;
+}
+.response .error{
+    color: red;
+}
+.pricedisplay{
+    border-top: 1px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px 0px;
+}
+.pricedisplay p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+}
+.total{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    padding: 5px 0px;
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
